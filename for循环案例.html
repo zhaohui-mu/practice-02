@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>for循环案例</title>
+</head>
+<body>
+1.求1-100之间所有数的平均值;
+2.求1-100之间所有偶数与奇数的和;
+3.求1-100之间所有能被3整除的数字的和;
+<script>
+    //1.需要一个sum和的变量,还需要一个平均值average变量
+    var sum = 0;
+    var average = 0;
+    for (var i = 1; i <= 100; i++){
+        sum += i;//sum = sum + i;
+    }
+    average = sum / 100;
+    console.log(average);
+</script>
+<script>
+    //2.需要一个偶数的和even,和一个奇数的变量odd;
+    var even = 0;
+    var odd = 0;
+    for (var i = 1; i <= 100; i++){
+        if (i % 2 == 0){
+            even = even + i;//even += i;
+        } else {
+            odd = odd + i;//odd += i;
+        }
+    }
+    console.log('偶数和' + even);
+    console.log('奇数和' + odd);
+</script>
+<script>
+    //3.能被3整除的数字的和
+    var result = 0;
+    for (var i = 1; i <= 100; i++){
+        if (i % 3 == 0){
+            result = result + i;//result += i;
+        }
+    }
+    console.log('被3整除的数字的和' + result);
+</script>
+</body>
+</html>
