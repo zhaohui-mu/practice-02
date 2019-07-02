@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>九九乘法表</title>
+<!--    <script>-->
+<!--        // for (var i =1; i <= 9; i++){-->
+<!--        //     var str = '';-->
+<!--        //     for (var j = 1; j <= j; j++){-->
+<!--        //         //1 x 1 = 2-->
+<!--        //         str += j + '×' + i + '=' + i * j + '\t';-->
+<!--        //     }-->
+<!--        //     str += '\n';-->
+<!--        // }-->
+<!--        // //console.log('str');-->
+<!--        // for(var r=1;r<=9;r++){  //控制行数-->
+<!--        //     var chart="";-->
+<!--        //     for(var c=1;c<=r;c++){   //控制列数-->
+<!--        //         chart+=(`${c}*${r}=${c*r}\t`)-->
+<!--        //     }-->
+<!--        //     console.log(chart);-->
+<!--        // }-->
+<!--        -->
+<!--    </script>-->
+</head>
+<body>
+1.一共九行，每行个数不同，使用双for循环
+2.外层for控制行数i，循环9次打印9行
+3.内层for空值每行公式j
+4.每行公式个数与行数一致，j<=i;
+每打印完一行需要换行
+<script>
+    var str = '';
+    for (var i = 1;i <= 9; i++){
+        for (var j = 1; j <= i; j++){
+            //str =str + '※';
+            str += j + '×' + i + '=' + i * j + '\t';
+        }
+        str += '\n';
+    }
+    console.log(str);
+</script>
+</body>
+</html>
