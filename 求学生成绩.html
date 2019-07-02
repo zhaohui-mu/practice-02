@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>求学生成绩案例</title>
+</head>
+<body>
+要求用户输入班级人数，然后依次输入每个学生的成绩，最后打印出该班级的总成绩和平均成绩
+<script>
+    /*1.弹出输入框总的班级人数（num）
+      2.依次输入学生成绩并保存（score），使用for循环，弹出的次数跟班级总人数有关系（i <= num）
+      3.计算成绩，先求总成绩（sum），然后求平均成绩（average）
+     */
+    var num = prompt('请输入总人数');
+    var sum = 0;
+    var average = 0;
+    for (var i = 1; i <= num; i++){
+        var score = prompt('请您输入第' + i + '个学生成绩');
+        sum = sum + parseFloat(score);//从promot取过来的数据是字符串型，需要将其转换为数值
+    }
+    average = sum / num;
+    alert('班级的总成绩是：' + sum + "\n" + '班级的平均成绩是：' + average);
+</script>
+</body>
+</html>
