@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五角星</title>
+</head>
+<body>
+通过追加字符串的形式打印
+<!--<script>-->
+<!--    /*var str = '';-->
+<!--    for (var i = 1; i <= 25; i++){-->
+<!--        str = str + '⭐';-->
+<!--    }-->
+<!--    console.log(str);*/-->
+<!--    var num = prompt('请输入个数');-->
+<!--    var str = '';-->
+<!--    for (var i = 1; i <= num; i++){-->
+<!--        str = str + '⭐';-->
+<!--    }-->
+<!--    console.log(str);-->
+<!--</script>-->
+双重for循环：将两个for循环嵌套起来
+for(外层的初始化变量；外层的条件表达式；外层的操作表达式){
+    for(里层的初始化变量；里层的条件表达式；里层的操作表达式){
+        执行语句；
+    }
+}
+将里层的循环堪称是外层循环的语句
+外层执行一次，里层执行全部
+<!--<script>-->
+<!--    for (var i = 1; i <= 3; i++){-->
+<!--        console.log('外层的第' + i + '次循环');-->
+<!--        for (var j = 1; j <= 3; j++){-->
+<!--            console.log('里层的第' + j + '次循环');-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
+打印五行五列星星
+<script>
+    var str = '';
+    for (var i = 1; i <=5; i++){
+        for (var j = 1; j <=5; j++){
+            str = str + '⭐';
+        }
+        str = str + '\n';
+    }
+    console.log(str);
+</script>
+打印n行n列的星星
+<script>
+    var rows = prompt('输入行数');
+    var cols = prompt('输入列数');
+    var str = '';
+    for (var i = 1; i <= rows; i++){
+        for (var j = 1; j <= cols; j++){
+            str = str + '⭐';
+        }
+        str = str + '\n';
+    }
+    console.log(str);
+</script>
+打印倒三角
+<script>
+    var str = '';
+    for (var i = 1; i <= 10; i++){//外层循环控制行数
+        for (var j = i; j <= 10; j++){//内层循环控制打印个数
+            str =str + '⭐';
+        }
+        str = str + '\n';
+    }
+    console.log(str);
+</script>
+打印正三角
+<script>
+    var str = '';
+    for (var i = 10; i >= 1; i--){//外层循环控制行数
+        for (var j = i; j <= 10; j++){//内层循环控制打印个数
+            str =str + '⭐';
+        }
+        str = str + '\n';
+    }
+    console.log(str);
+</script>
+</body>
+</html>
