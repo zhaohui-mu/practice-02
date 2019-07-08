@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组案例</title>
+</head>
+<body>
+<p>1.新建一个数组，里面存放10个整数</p>
+<script>
+    // 1.使用循环追加数组
+    // 2.声明空数组arr
+    // 3.循环中的计数器i可作为数组元素存入
+    // 4.计数器从0开始，存入的数组元素要+1
+    var arr = [];
+    for (var i = 0; i < 10; i++) {
+        arr[i] = i + 1;
+    }
+    console.log(arr);
+</script>
+<p>要求将数组[2,0,6,1,77,0,52,0,25,7]中大于等于10的元素选出来，放入新的数组</p>
+<script>
+    // 1.声明存放新数据的新数组newArr
+    // 2.遍历旧数组，找到大于等于10的元素
+    // 3.依次追加给新数组
+    var arr = [2,0,6,1,77,0,52,0,25,7];
+    var newArr = [];
+    var j = 0;
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] >= 10){
+            newArr[j] = arr[i];
+            j++;
+            //newArr[i] = arr[i];//会将前面的三个空元素也存入
+        }
+    }
+    console.log(newArr);
+</script>
+<p>将数组[2,0,6,1,77,0,52,0,25,7]中的0去掉后，新城一个不包含0的新数组</p>
+1.声明一个新数组newArr存放筛选之后的数组
+2.遍历旧数组，将不是0的数组添加到newArr中（采用数组名+索引的格式接收数据）
+3.新数组的个数用.length不断累加
+<script>
+    var arr = [2,0,6,1,77,0,52,0,25,7];
+    var newArr = [];
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] !== 0){
+            newArr[newArr.length] = arr[i];
+        }
+    }
+    console.log(newArr);
+</script>
+<p>将数组['red','green','blue','pink','purple']的内容反过来存放，
+    输入：['purple','pink','blue','green','red']</p>
+1.声明新数组newArr存放新的内容
+2.遍历旧数组，将旧数组中最后一个元素取出来作为新数组中的第一个
+3.新数组的个数用.length不断累加,旧数组使用递减的方式
+<script>
+    var arr = ['red','green','blue','pink','purple'];
+    var newArr = [];
+    for (var i = arr.length - 1; i >= 0; i--){
+        newArr[newArr.length] = arr[i];
+    }
+    console.log(newArr);
+</script>
+<script>
+    var num1 = 1;
+    var num2 = 2;
+    var num3;
+    num3 = num1;
+    num1 = num2;
+    num2 = num3;
+    console.log(num1,num2,num3);
+</script>
+</body>
+</html>
