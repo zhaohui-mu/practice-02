@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数作业1</title>
+</head>
+<body>
+1.用户输入任意两个数字的任意算术运算，并弹出运算后的结果
+2.用户输入任意任意两个数字判断大小，并弹出运算后的结果
+3.用户输入任意三个数字判断大小，并弹出运算后结果
+4.用户输入一个数，判断是否为素数，并弹出返回值
+<p>1</p>
+<script>
+    function num(num1, num2) {
+        return num1 + num2
+    }
+    var one = prompt('第一个数：');
+    var two = prompt('第二个数：');
+    alert(num(parseFloat(one),parseFloat(two)));
+</script>
+<p>2</p>
+<script>
+    function num(num1, num2) {
+        return num1 > num2 ? num1 : num2;
+    }
+    var one = prompt('第一个数：');
+    var two = prompt('第二个数：');
+    alert(num(parseFloat(one),parseFloat(two)));
+</script>
+<p>3</p>
+<script>
+    function num(num1, num2, num3){
+        var max = num1;
+        if (num1 > num2){
+            max = num1;
+        } else {
+            max = num2;
+        }
+        if (num2 > num3){
+            max = num2;
+        } else {
+            max = num3;
+        }
+        return max;
+    }
+    var one = prompt('第一个数：');
+    var two = prompt('第二个数：');
+    var three = prompt('第三个数：');
+    alert(num(parseFloat(one),parseFloat(two),parseFloat(three)));
+</script>
+<p>4</p>
+<script>
+    var num = prompt('输入数字：');
+    var flag = true;//设置 flag 初始为真
+    var k = Number(Math.floor(num / 2));//设置输入数字取整？
+    for (var i = 2; i <= k; i++){
+        if (num % i === 0){//判断是否能整除，为真则弹出
+            flag = false;//不能整除则为假
+            break;
+        }
+    }
+    if (flag) {
+        console.log('是素数');//为真则弹出
+    } else {
+        console.log('不是素数');//为假则弹出
+    }
+    alert(flag);//没搞懂2019年7月14日
+</script>
+</body>
+</html>
